@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, :inline => "apt-get -y update && apt-get -y upgrade"
   config.vm.provision :shell, :inline => "apt-get install --reinstall -y language-pack-en language-pack-pt"
-  config.vm.provision :shell, :inline => "apt-get install -y curl tmux vim sqlite3 fontconfig htop libxslt1.1 build-essential libtool checkinstall libxml2-dev"
+  config.vm.provision :shell, :inline => "apt-get install -y curl tmux vim sqlite3 fontconfig htop libxslt1.1 build-essential libtool checkinstall libxml2-dev tree"
   config.vm.provision :shell, :inline => "chmod 755 /home/vagrant"
 
   # Git
