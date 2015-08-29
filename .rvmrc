@@ -1,1 +1,1 @@
-rvm use 2.2.0@scanboo --create
+rvm use 2.2.0@artmanager --create
