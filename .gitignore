@@ -1,0 +1,13 @@
+.DS_Store
+notes
+boxes/*
+/.vagrant
+/website/www/.vagrant
+/vagrant-spec.config.rb
+*.log
+/projects/
+/projects/*
+.bundle/
+vendor/
+classpath/
+classpath/*
