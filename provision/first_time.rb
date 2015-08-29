@@ -35,7 +35,6 @@ end
 
 # removes script form bashrc
 system "sed -i '/.*first_time.rb/d' ~/.bashrc"
-
 puts 'press enter to continue...'
 gets
 
