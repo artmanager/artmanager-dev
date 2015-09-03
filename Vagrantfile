@@ -18,18 +18,20 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, :inline => "apt-get -y update && apt-get -y upgrade"
   config.vm.provision :shell, :inline => "apt-get install --reinstall -y language-pack-en language-pack-pt"
-  config.vm.provision :shell, :inline => "apt-get install -y curl tmux vim sqlite3 fontconfig htop libxslt1.1 build-essential libtool checkinstall libxml2-dev tree"
+  config.vm.provision :shell, :inline => "apt-get install -y curl tmux vim sqlite3 fontconfig htop libxslt1.1 build-essential libtool checkinstall libxml2-dev tree openssl libssl-dev pkg-config"
   config.vm.provision :shell, :inline => "chmod 755 /home/vagrant"
 
   # Git
   config.vm.provision :shell, :path => "provision/git.sh"
-  # Postgres
-  config.vm.provision :shell, :path => "provision/postgres.sh"
   # Docker
   config.vm.provision :shell, :path => "provision/docker.sh"
   # Ruby
   config.vm.provision :shell, :path => "provision/rvm.sh", :args => "head"
   config.vm.provision :shell, :path => "provision/ruby.sh", :args => "2.2.0 bundler"
+  # Nodejs
+  config.vm.provision :shell, :path => "provision/nodejs.sh"
+  # Postgres
+  config.vm.provision :shell, :path => "provision/postgres.sh"
   # Prepare first time
   config.vm.provision :shell, :path => "provision/prepare_first_time.sh"
 
