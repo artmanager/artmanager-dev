@@ -23,7 +23,7 @@ gets
 
 puts 'cloning projects...'
 
-['infra'].each do |project|
+['infra,structure'].each do |project|
   if File.directory?("/vagrant/projects/#{project}")
     puts "project #{project} already cloned"
   else
