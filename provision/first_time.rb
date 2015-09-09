@@ -21,18 +21,6 @@ puts File.read('/home/vagrant/.ssh/id_rsa.pub').light_blue
 puts 'press enter to continue...'
 gets
 
-puts 'cloning projects...'
-
-['infra,structure'].each do |project|
-  if File.directory?("/vagrant/projects/#{project}")
-    puts "project #{project} already cloned"
-  else
-    puts "cloning #{project}"
-    Git.clone("git@bitbucket.org:artmanager/art-#{project}.git", "/vagrant/projects/#{project}")
-  end
-  system "ln -s /vagrant/projects/#{project} ~/#{project}"
-end
-
 # removes script form bashrc
 system "sed -i '/.*first_time.rb/d' ~/.bashrc"
 puts 'press enter to continue...'
