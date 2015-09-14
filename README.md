@@ -31,3 +31,4 @@ psql -W -d artmanager_development -U vagrant -h localhost
 
 password: ***
 ```
+- [Dados do PostgreSQL](https://bitbucket.org/artmanager/artmanager-dev/src/698a974831dea6dc2ff950abbc3683b10974166c/provision/postgres.sh?at=master&fileviewer=file-view-default)
