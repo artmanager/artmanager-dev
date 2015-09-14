@@ -9,8 +9,6 @@ else
   read USERNAME_BITBUCKET
   echo "Digite sua senha no bitbucket, seguido pelo ENTER"
   read PASSWORD_BITBUCKET
-  echo "USERNAME_BITBUCKET=$USERNAME_BITBUCKET" >> $BASHRC
-  echo "PASSWORD_BITBUCKET=$PASSWORD_BITBUCKET" >> $BASHRC
 fi
 
 echo -ne "Coletando dados do bitbucket." && sleep 1 && echo -ne "." && sleep 1 && echo "."
