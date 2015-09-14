@@ -18,6 +18,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, :inline => "apt-get -y update && apt-get -y upgrade"
   config.vm.provision :shell, :inline => "apt-get install --reinstall -y language-pack-en language-pack-pt"
+  config.vm.provision :shell, :inline => "sudo locale-gen en_US en_US.UTF-8"
+  config.vm.provision :shell, :inline => "sudo dpkg-reconfigure locales"
   config.vm.provision :shell, :inline => "apt-get install -y curl tmux vim sqlite3 fontconfig htop libxslt1.1 build-essential libtool checkinstall libxml2-dev tree openssl libssl-dev pkg-config jq"
   config.vm.provision :shell, :inline => "chmod 755 /home/vagrant"
   
@@ -40,6 +42,5 @@ Vagrant.configure("2") do |config|
 
   # Postgres
   config.vm.network :forwarded_port, guest: 5432, host: 5432
- 
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
 end
-
