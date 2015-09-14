@@ -25,7 +25,7 @@ vagrant halt
 
 ## - O novo ambiente foi criado para todos rodarem os testes e realizarem as validações do código ##
 
-- Conectar ao postgres
+- Conectar ao postgres pelo linux
 ```
 psql -W -d artmanager_development -U vagrant -h localhost
 
