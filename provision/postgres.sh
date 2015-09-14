@@ -13,4 +13,3 @@ GRANT ALL PRIVILEGES ON DATABASE artmanager_development TO vagrant;
 EOSQL
 
 sudo -u postgres psql -d template1 -c 'create extension hstore;'
-
