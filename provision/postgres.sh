@@ -13,3 +13,5 @@ GRANT ALL PRIVILEGES ON DATABASE artmanager_development TO vagrant;
 EOSQL
 
 sudo -u postgres psql -d template1 -c 'create extension hstore;'
+echo "host all all all password" >> /etc/postgresql/9.3/main/pg_hba.conf
+echo "listen_addresses = '*'" >> /etc/postgresql/9.3/main/postgresql.conf
